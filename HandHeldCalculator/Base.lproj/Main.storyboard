@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4Kf-6q-X82">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Kf-6q-X82">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HandHeldCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QKd-nj-QB0"/>
+                        <viewControllerLayoutGuide type="bottom" id="eqv-Kq-j71"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8RP-ML-6zl">
-                                <rect key="frame" x="0.0" y="64" width="320" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RP-ML-6zl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="81"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="68"/>
                                 <color key="textColor" red="0.47249842171717171" green="0.47249842171717171" blue="0.47249842171717171" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HrX-dM-aBU">
-                                <rect key="frame" x="20" y="248" width="53" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-dM-aBU">
+                                <rect key="frame" x="8" y="236" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="7"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -36,12 +41,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dS1-Ej-rWo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JFl-nA-rVG">
-                                <rect key="frame" x="97" y="246" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFl-nA-rVG">
+                                <rect key="frame" x="86" y="236" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="8"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -51,27 +57,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kne-TV-vrU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rfb-2s-Lpm">
-                                <rect key="frame" x="247" y="248" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYj-FP-hTy">
+                                <rect key="frame" x="164" y="236" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="X"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DGE-vB-OWg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LYj-FP-hTy">
-                                <rect key="frame" x="173" y="248" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="9"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -81,12 +73,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0d-f1-DIt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gFL-ix-uRz">
-                                <rect key="frame" x="20" y="315" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFL-ix-uRz">
+                                <rect key="frame" x="8" y="319" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="4"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -96,12 +89,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHw-Cq-ZDp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L8g-Mt-GjA">
-                                <rect key="frame" x="97" y="315" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8g-Mt-GjA">
+                                <rect key="frame" x="86" y="319" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="5"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -111,12 +105,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ny9-iU-YiO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zg2-Fj-7wF">
-                                <rect key="frame" x="173" y="315" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg2-Fj-7wF">
+                                <rect key="frame" x="164" y="319" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="6"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -126,12 +121,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amg-dD-iQS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RaP-cw-fVf">
-                                <rect key="frame" x="20" y="382" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaP-cw-fVf">
+                                <rect key="frame" x="8" y="402" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="1"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -141,12 +137,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1r-Wz-snp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="znV-x9-kAb">
-                                <rect key="frame" x="97" y="382" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znV-x9-kAb">
+                                <rect key="frame" x="86" y="402" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="2"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -156,12 +153,14 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uGx-kd-RUW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Edy-pW-mVt">
-                                <rect key="frame" x="247" y="382" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edy-pW-mVt">
+                                <rect key="frame" x="242" y="402" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -171,12 +170,13 @@
                                     <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4o-Sq-5gw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zw7-tJ-hbR">
-                                <rect key="frame" x="173" y="382" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw7-tJ-hbR">
+                                <rect key="frame" x="164" y="402" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="3"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -186,12 +186,13 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fe1-Oe-NOX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zit-GL-dVu">
-                                <rect key="frame" x="20" y="181" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-GL-dVu">
+                                <rect key="frame" x="8" y="153" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="AC"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -201,12 +202,16 @@
                                     <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBP-QC-2ca"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aaG-5i-cne">
-                                <rect key="frame" x="20" y="448" width="130" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-5i-cne">
+                                <rect key="frame" x="8" y="485" width="148" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aaG-5i-cne" secondAttribute="height" multiplier="148:75" id="Akc-uP-QAD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="0"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -216,12 +221,14 @@
                                     <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehl-7s-No5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wb2-24-8en">
-                                <rect key="frame" x="247" y="181" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wb2-24-8en">
+                                <rect key="frame" x="242" y="153" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="/"/>
+                                <state key="normal" title="/">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -231,12 +238,14 @@
                                     <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIy-n9-kqd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3FC-su-8mk">
-                                <rect key="frame" x="247" y="315" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FC-su-8mk">
+                                <rect key="frame" x="242" y="319" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="-"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -246,27 +255,14 @@
                                     <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MND-GJ-1o9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ur4-N0-gcE">
-                                <rect key="frame" x="173" y="448" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqO-sR-YC4">
+                                <rect key="frame" x="164" y="153" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="."/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="dotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZY-SA-LE1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FqO-sR-YC4">
-                                <rect key="frame" x="173" y="181" width="54" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="sqrt"/>
+                                <state key="normal" title="√">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -276,12 +272,14 @@
                                     <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fff-cH-OWS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2fi-af-M29">
-                                <rect key="frame" x="97" y="181" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fi-af-M29">
+                                <rect key="frame" x="86" y="153" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="%"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -291,12 +289,31 @@
                                     <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktv-IA-94W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="trl-ZY-lSg">
-                                <rect key="frame" x="247" y="448" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-2s-Lpm">
+                                <rect key="frame" x="242" y="236" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="="/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operationsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DGE-vB-OWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trl-ZY-lSg">
+                                <rect key="frame" x="242" y="485" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -306,17 +323,141 @@
                                     <action selector="equalsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKh-Ux-4Bf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur4-N0-gcE">
+                                <rect key="frame" x="164" y="485" width="70" height="75"/>
+                                <color key="backgroundColor" white="0.78903805895855561" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.96470594409999999" green="0.98823535439999999" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZY-SA-LE1"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.45734089612960815" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3FC-su-8mk" secondAttribute="trailing" constant="8" id="0Kt-iN-rRN"/>
+                            <constraint firstItem="Edy-pW-mVt" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="2LS-XY-dhz"/>
+                            <constraint firstItem="gFL-ix-uRz" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="2Xq-wd-pgl"/>
+                            <constraint firstItem="trl-ZY-lSg" firstAttribute="top" secondItem="Edy-pW-mVt" secondAttribute="bottom" constant="8" id="2nE-re-tg1"/>
+                            <constraint firstItem="ur4-N0-gcE" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="3lL-OK-SEQ"/>
+                            <constraint firstItem="Zw7-tJ-hbR" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="4I1-yX-T8m"/>
+                            <constraint firstItem="LYj-FP-hTy" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="4ro-GT-gI4"/>
+                            <constraint firstItem="Edy-pW-mVt" firstAttribute="top" secondItem="3FC-su-8mk" secondAttribute="bottom" constant="8" id="5Sk-8u-ejw"/>
+                            <constraint firstItem="gFL-ix-uRz" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="6y3-ge-OfP"/>
+                            <constraint firstItem="2fi-af-M29" firstAttribute="leading" secondItem="Zit-GL-dVu" secondAttribute="trailing" constant="8" id="79p-1k-DuH"/>
+                            <constraint firstItem="ur4-N0-gcE" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="7g0-XI-0vJ"/>
+                            <constraint firstItem="rfb-2s-Lpm" firstAttribute="leading" secondItem="LYj-FP-hTy" secondAttribute="trailing" constant="8" id="919-lk-pCk"/>
+                            <constraint firstItem="Zg2-Fj-7wF" firstAttribute="leading" secondItem="L8g-Mt-GjA" secondAttribute="trailing" constant="8" id="AiS-Jq-SRC"/>
+                            <constraint firstItem="Zw7-tJ-hbR" firstAttribute="top" secondItem="Zg2-Fj-7wF" secondAttribute="bottom" constant="8" id="BDj-Wl-WlE"/>
+                            <constraint firstItem="znV-x9-kAb" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="Bef-1J-Rgs"/>
+                            <constraint firstItem="HrX-dM-aBU" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="Cdk-z3-kt6"/>
+                            <constraint firstItem="Zg2-Fj-7wF" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="CfO-cd-9qL"/>
+                            <constraint firstItem="rfb-2s-Lpm" firstAttribute="top" secondItem="wb2-24-8en" secondAttribute="bottom" constant="8" id="Cuz-SZ-Bik"/>
+                            <constraint firstItem="HrX-dM-aBU" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="E94-xA-alG"/>
+                            <constraint firstItem="Zit-GL-dVu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="EKm-0p-OMt"/>
+                            <constraint firstItem="L8g-Mt-GjA" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="F0F-tJ-zmq"/>
+                            <constraint firstItem="JFl-nA-rVG" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="F0L-KS-k4R"/>
+                            <constraint firstItem="JFl-nA-rVG" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="F8U-UW-mUG"/>
+                            <constraint firstAttribute="trailing" secondItem="rfb-2s-Lpm" secondAttribute="trailing" constant="8" id="FL0-Gh-DO7"/>
+                            <constraint firstItem="aaG-5i-cne" firstAttribute="top" secondItem="znV-x9-kAb" secondAttribute="bottom" constant="8" id="Fh0-au-MMK"/>
+                            <constraint firstItem="eqv-Kq-j71" firstAttribute="top" secondItem="trl-ZY-lSg" secondAttribute="bottom" constant="8" id="FlO-dy-Sq6"/>
+                            <constraint firstItem="ur4-N0-gcE" firstAttribute="top" secondItem="Zw7-tJ-hbR" secondAttribute="bottom" constant="8" id="GBD-Un-G84"/>
+                            <constraint firstItem="3FC-su-8mk" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="Gbq-Hr-p3c"/>
+                            <constraint firstItem="RaP-cw-fVf" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="Hl3-b1-5aJ"/>
+                            <constraint firstItem="rfb-2s-Lpm" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="IP0-Zr-7We"/>
+                            <constraint firstItem="rfb-2s-Lpm" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="IkV-Eo-iA4"/>
+                            <constraint firstItem="3FC-su-8mk" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="LrZ-Ud-fis"/>
+                            <constraint firstItem="wb2-24-8en" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="MSa-dU-Sj2"/>
+                            <constraint firstItem="aaG-5i-cne" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Nfn-e8-Rqu"/>
+                            <constraint firstItem="JFl-nA-rVG" firstAttribute="top" secondItem="2fi-af-M29" secondAttribute="bottom" constant="8" id="Nt5-jb-z47"/>
+                            <constraint firstItem="aaG-5i-cne" firstAttribute="top" secondItem="znV-x9-kAb" secondAttribute="bottom" constant="8" id="OTd-i3-JyI"/>
+                            <constraint firstItem="2fi-af-M29" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="Pvi-QJ-mgH"/>
+                            <constraint firstItem="FqO-sR-YC4" firstAttribute="top" secondItem="8RP-ML-6zl" secondAttribute="bottom" constant="8" id="QkJ-CD-4LX"/>
+                            <constraint firstItem="ur4-N0-gcE" firstAttribute="leading" secondItem="aaG-5i-cne" secondAttribute="trailing" constant="8" id="Qkz-pN-eUb"/>
+                            <constraint firstItem="L8g-Mt-GjA" firstAttribute="top" secondItem="JFl-nA-rVG" secondAttribute="bottom" constant="8" id="Qmf-oB-Kce"/>
+                            <constraint firstItem="trl-ZY-lSg" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="SSz-ta-gXU"/>
+                            <constraint firstItem="FqO-sR-YC4" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="THy-7f-u9W"/>
+                            <constraint firstItem="gFL-ix-uRz" firstAttribute="top" secondItem="HrX-dM-aBU" secondAttribute="bottom" constant="8" id="Tu2-Mp-kdF"/>
+                            <constraint firstItem="8RP-ML-6zl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uwh-Wo-KQR"/>
+                            <constraint firstAttribute="trailing" secondItem="8RP-ML-6zl" secondAttribute="trailing" id="YYR-n0-jbP"/>
+                            <constraint firstItem="trl-ZY-lSg" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="Yhn-Yp-KHv"/>
+                            <constraint firstItem="znV-x9-kAb" firstAttribute="leading" secondItem="RaP-cw-fVf" secondAttribute="trailing" constant="8" id="a1V-xp-FcC"/>
+                            <constraint firstItem="gFL-ix-uRz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="aan-cL-Pu5"/>
+                            <constraint firstItem="Edy-pW-mVt" firstAttribute="leading" secondItem="Zw7-tJ-hbR" secondAttribute="trailing" constant="8" id="bbF-BP-Cz3"/>
+                            <constraint firstAttribute="trailing" secondItem="wb2-24-8en" secondAttribute="trailing" constant="8" id="cei-QT-U1h"/>
+                            <constraint firstItem="ur4-N0-gcE" firstAttribute="leading" secondItem="aaG-5i-cne" secondAttribute="trailing" constant="8" id="dAY-Za-C6v"/>
+                            <constraint firstItem="eqv-Kq-j71" firstAttribute="top" secondItem="ur4-N0-gcE" secondAttribute="bottom" constant="8" id="dWz-7o-pF4"/>
+                            <constraint firstItem="Zw7-tJ-hbR" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="dZe-gm-2II"/>
+                            <constraint firstItem="wb2-24-8en" firstAttribute="top" secondItem="8RP-ML-6zl" secondAttribute="bottom" constant="8" id="eeC-52-74l"/>
+                            <constraint firstItem="Zg2-Fj-7wF" firstAttribute="top" secondItem="LYj-FP-hTy" secondAttribute="bottom" constant="8" id="fAE-CY-2MJ"/>
+                            <constraint firstItem="LYj-FP-hTy" firstAttribute="top" secondItem="FqO-sR-YC4" secondAttribute="bottom" constant="8" id="fNW-Rv-tUS"/>
+                            <constraint firstAttribute="trailing" secondItem="trl-ZY-lSg" secondAttribute="trailing" constant="8" id="fT5-HT-aLS"/>
+                            <constraint firstItem="wb2-24-8en" firstAttribute="leading" secondItem="FqO-sR-YC4" secondAttribute="trailing" constant="8" id="gI7-ZH-omK"/>
+                            <constraint firstItem="RaP-cw-fVf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="gth-3U-ak8"/>
+                            <constraint firstItem="Zit-GL-dVu" firstAttribute="top" secondItem="8RP-ML-6zl" secondAttribute="bottom" constant="8" id="guH-Cr-TAu"/>
+                            <constraint firstItem="Edy-pW-mVt" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="hJj-Pi-LYk"/>
+                            <constraint firstItem="LYj-FP-hTy" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="hfs-AC-OIS"/>
+                            <constraint firstItem="3FC-su-8mk" firstAttribute="leading" secondItem="Zg2-Fj-7wF" secondAttribute="trailing" constant="8" id="hsx-Lh-mgB"/>
+                            <constraint firstItem="trl-ZY-lSg" firstAttribute="leading" secondItem="ur4-N0-gcE" secondAttribute="trailing" constant="8" id="iUI-QB-Vri"/>
+                            <constraint firstItem="aaG-5i-cne" firstAttribute="top" secondItem="RaP-cw-fVf" secondAttribute="bottom" constant="8" id="k8A-u0-Lp9"/>
+                            <constraint firstItem="L8g-Mt-GjA" firstAttribute="leading" secondItem="gFL-ix-uRz" secondAttribute="trailing" constant="8" id="l19-1i-tMo"/>
+                            <constraint firstItem="znV-x9-kAb" firstAttribute="top" secondItem="L8g-Mt-GjA" secondAttribute="bottom" constant="8" id="l22-8k-mpM"/>
+                            <constraint firstItem="HrX-dM-aBU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="mBg-OC-rSz"/>
+                            <constraint firstItem="eqv-Kq-j71" firstAttribute="top" secondItem="aaG-5i-cne" secondAttribute="bottom" constant="8" id="mMv-ZG-JLX"/>
+                            <constraint firstItem="2fi-af-M29" firstAttribute="top" secondItem="8RP-ML-6zl" secondAttribute="bottom" constant="8" id="mRc-dD-HaN"/>
+                            <constraint firstItem="Zw7-tJ-hbR" firstAttribute="leading" secondItem="znV-x9-kAb" secondAttribute="trailing" constant="8" id="myB-MC-iC4"/>
+                            <constraint firstItem="HrX-dM-aBU" firstAttribute="top" secondItem="Zit-GL-dVu" secondAttribute="bottom" constant="8" id="oG4-5f-2iI"/>
+                            <constraint firstItem="Zg2-Fj-7wF" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="oeD-Iq-mLF"/>
+                            <constraint firstItem="RaP-cw-fVf" firstAttribute="top" secondItem="gFL-ix-uRz" secondAttribute="bottom" constant="8" id="pM6-PS-fK5"/>
+                            <constraint firstItem="FqO-sR-YC4" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="pgn-SA-wne"/>
+                            <constraint firstItem="3FC-su-8mk" firstAttribute="top" secondItem="rfb-2s-Lpm" secondAttribute="bottom" constant="8" id="pye-oA-jWm"/>
+                            <constraint firstItem="L8g-Mt-GjA" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="qQ4-Dv-ziB"/>
+                            <constraint firstItem="wb2-24-8en" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="sak-Td-evz"/>
+                            <constraint firstItem="RaP-cw-fVf" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="td6-6l-f4m"/>
+                            <constraint firstItem="LYj-FP-hTy" firstAttribute="leading" secondItem="JFl-nA-rVG" secondAttribute="trailing" constant="8" id="wVd-Gm-f55"/>
+                            <constraint firstItem="FqO-sR-YC4" firstAttribute="leading" secondItem="2fi-af-M29" secondAttribute="trailing" constant="8" id="wZM-vE-ko6"/>
+                            <constraint firstItem="8RP-ML-6zl" firstAttribute="top" secondItem="QKd-nj-QB0" secondAttribute="bottom" id="wmL-M2-S3Q"/>
+                            <constraint firstItem="2fi-af-M29" firstAttribute="width" secondItem="Zit-GL-dVu" secondAttribute="width" id="x0L-Kh-AcZ"/>
+                            <constraint firstItem="JFl-nA-rVG" firstAttribute="leading" secondItem="HrX-dM-aBU" secondAttribute="trailing" constant="8" id="xwe-bF-IwD"/>
+                            <constraint firstAttribute="trailing" secondItem="Edy-pW-mVt" secondAttribute="trailing" constant="8" id="zeZ-dg-u5R"/>
+                            <constraint firstItem="znV-x9-kAb" firstAttribute="height" secondItem="Zit-GL-dVu" secondAttribute="height" id="zlG-Ac-0EC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calculator" id="hU8-1m-hBc"/>
                     <connections>
                         <outlet property="screenLabel" destination="8RP-ML-6zl" id="dWf-TK-s4p"/>
+                        <outletCollection property="buttons" destination="LYj-FP-hTy" collectionClass="NSMutableArray" id="ImJ-Bb-Yiq"/>
+                        <outletCollection property="buttons" destination="FqO-sR-YC4" collectionClass="NSMutableArray" id="Q3V-aZ-ewC"/>
+                        <outletCollection property="buttons" destination="wb2-24-8en" collectionClass="NSMutableArray" id="06y-iF-QVJ"/>
+                        <outletCollection property="buttons" destination="rfb-2s-Lpm" collectionClass="NSMutableArray" id="Qpz-H8-VaW"/>
+                        <outletCollection property="buttons" destination="3FC-su-8mk" collectionClass="NSMutableArray" id="EPN-IW-ZJ2"/>
+                        <outletCollection property="buttons" destination="Zg2-Fj-7wF" collectionClass="NSMutableArray" id="l7d-9E-l35"/>
+                        <outletCollection property="buttons" destination="Edy-pW-mVt" collectionClass="NSMutableArray" id="ugO-cx-Iag"/>
+                        <outletCollection property="buttons" destination="Zw7-tJ-hbR" collectionClass="NSMutableArray" id="lhb-Vc-qMJ"/>
+                        <outletCollection property="buttons" destination="ur4-N0-gcE" collectionClass="NSMutableArray" id="NGq-CN-OGQ"/>
+                        <outletCollection property="buttons" destination="trl-ZY-lSg" collectionClass="NSMutableArray" id="YCk-1b-dt2"/>
+                        <outletCollection property="buttons" destination="aaG-5i-cne" collectionClass="NSMutableArray" id="yD4-uY-EJU"/>
+                        <outletCollection property="buttons" destination="znV-x9-kAb" collectionClass="NSMutableArray" id="BQ7-oL-gmw"/>
+                        <outletCollection property="buttons" destination="L8g-Mt-GjA" collectionClass="NSMutableArray" id="s1G-7l-9Uk"/>
+                        <outletCollection property="buttons" destination="JFl-nA-rVG" collectionClass="NSMutableArray" id="3BG-bl-YEy"/>
+                        <outletCollection property="buttons" destination="2fi-af-M29" collectionClass="NSMutableArray" id="rQS-bD-7Nb"/>
+                        <outletCollection property="buttons" destination="Zit-GL-dVu" collectionClass="NSMutableArray" id="Evn-rR-Rp5"/>
+                        <outletCollection property="buttons" destination="HrX-dM-aBU" collectionClass="NSMutableArray" id="h24-Et-Zwc"/>
+                        <outletCollection property="buttons" destination="gFL-ix-uRz" collectionClass="NSMutableArray" id="zcU-Xo-UGN"/>
+                        <outletCollection property="buttons" destination="RaP-cw-fVf" collectionClass="NSMutableArray" id="b1j-Ru-vgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="319"/>
+            <point key="canvasLocation" x="573" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fsl-FQ-Ikm">

@@ -15,8 +15,12 @@ class ViewController: UIViewController {
    var result = Float()
    var operation = ""
     
+   
     
     
+    
+    @IBOutlet var buttons: [UIButton]!
+  
     
     @IBAction func dotButton(sender: AnyObject) {
     var dot = sender.currentTitle
@@ -27,6 +31,8 @@ class ViewController: UIViewController {
     
     @IBAction func numbersButton(sender: AnyObject) {
     
+    
+        
         var number = sender.currentTitle
         if isTypingNumber == true {
             
@@ -95,8 +101,9 @@ class ViewController: UIViewController {
             ]
         }
     
-    
-    
+        for button in buttons {
+            button.showsTouchWhenHighlighted = true
+        }
     
     
     
